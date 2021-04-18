@@ -58,7 +58,7 @@ public class APITest {
 			.post("/todo")
 		.then()
 			.statusCode(201)
-			.extract().path("id");
+			.extract().path("id")
 		;
 		
 		System.out.println(id);
@@ -67,7 +67,8 @@ public class APITest {
 		.when()
 			.delete("/todo/"+id)
 		.then()
-			.statusCode(204);
+			.statusCode(204)
+		;	
 	}
 
 }
